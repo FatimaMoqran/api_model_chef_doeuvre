@@ -1,0 +1,3 @@
+#dont track this folders
+/model_corps_mail_bert
+/*.ipynb_checkpoints
