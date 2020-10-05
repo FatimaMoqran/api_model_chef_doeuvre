@@ -1,2 +1,6 @@
-
-ktrain == 0.21.3
+Flask == 1.1.1
+#transformers ==  3.1
+tensorflow == 2.3.0
+ktrain == 0.21.4
+#ktrain==0.19.6 
+#transformers == 3.0.2

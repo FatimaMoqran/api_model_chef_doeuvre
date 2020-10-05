@@ -13,9 +13,9 @@ predictor = None
 def load_predictor():
     global predictor
     predictor = ktrain.load_predictor("model_corps_mail_bert")
-   #if hasattr(predictor.model, '_make_predict_function'):
-        #predictor.model._make_predict_function()
-    #return predictor
+    if hasattr(predictor.model, '_make_predict_function'):
+        predictor.model._make_predict_function()
+    return predictor
 
 @app.route('/predict',methods=['POST'])
 def predict():
@@ -41,5 +41,5 @@ if __name__ == "__main__":
     print(("* Loading Keras model and Flask starting server..."
         "please wait until server has fully started"))
     load_predictor()
-    port = 8888
+    port = 8008
     app.run(host='0.0.0.0', port=port)
