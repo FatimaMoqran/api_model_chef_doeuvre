@@ -22,7 +22,7 @@ def predict():
     #fonction user : prédiction d'un texte contenu dans le body 
     # return : une prédiction 
 
-    data = request.get_json()
+    data = request.get_json(force=True)
     
     print(data)
     print(type(data))
